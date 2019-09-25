@@ -1,0 +1,76 @@
+#Task1
+def avarage(x,y):
+  return (x+y)/2
+avarage(6,3)
+#Task2
+def task2(le):
+  return range(le)
+#Task3
+
+
+#Task4
+def task4(x,y):
+  if x >= 0 and y>= 0:
+    print("YES")
+  else:
+    print("NO")
+
+task4(7,8)
+task4(-7,8)
+
+#Task5
+def dont_like_loops(some_list):
+  cycle =0
+  for i in some_list:
+    cycle+= i
+  return cycle
+   
+print(dont_like_loops([9,8,9,6,0]))  
+print(dont_like_loops([9,8,9,6,0,8,9]))
+#Task6
+def task6(lis):
+  return min(lis)
+
+print(task6([7,9,5,7,4,6]))  
+
+#Task7
+def task7 (lis):
+  li= []
+  for i in lis:
+    if i % 2 == 0:
+      li.append(i) 
+  print(max(li))
+  return max(li)
+
+
+task7([9,6,7,4,10,88,99,100,400])
+
+def task8(a):
+  print(a[:4])
+  return a[:4]
+
+task8([6,4,5,7,8,9,4,3,2])
+
+def task9 (li_a,li_b):
+  result =[]
+  for i  in li_a:
+    if i in li_b:
+      result.append(i)
+  print (result)
+  return result
+
+task9([8,9,6,5,7,5,7,0],[8,9,3,1,1,0,4,5,7])
+
+def task10 (li_a,li_b):
+  result =[]
+  for i  in li_a:
+    if i in li_b and i > 7: # тоже самое только с добавлением граници
+      result.append(i)
+  print (result)
+  return result
+
+task10([8,9,6,5,7,5,7,0],[8,9,3,1,1,0,4,5,7])
+
+#Task11
+def task11(li):
+  pass
