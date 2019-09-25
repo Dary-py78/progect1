@@ -1,14 +1,14 @@
-#Task1
+import random
+import string
+
+#Task1 функция принимающая 2 числа и возвращающее средне арифметическое
 def avarage(x,y):
   return (x+y)/2
 avarage(6,3)
-#Task2
+#Task2 функция принимающая число X и возвращающая список произвольных чисел. Длина списка = X 
 def task2(le):
   return range(le)
-#Task3
-
-
-#Task4
+#Task4функция принимающая 2 числа и возвращающее "YES" если у чисел одинаковый знак иначе "NO"
 def task4(x,y):
   if x >= 0 and y>= 0:
     print("YES")
@@ -18,7 +18,7 @@ def task4(x,y):
 task4(7,8)
 task4(-7,8)
 
-#Task5
+#Task5функция принимающая список чисел и возвращающая сумму всех чисел
 def dont_like_loops(some_list):
   cycle =0
   for i in some_list:
@@ -27,13 +27,13 @@ def dont_like_loops(some_list):
    
 print(dont_like_loops([9,8,9,6,0]))  
 print(dont_like_loops([9,8,9,6,0,8,9]))
-#Task6
+#Task6 функция принимающая список чисел и возвращающая минимальное чисто
 def task6(lis):
   return min(lis)
 
 print(task6([7,9,5,7,4,6]))  
 
-#Task7
+#Task7 функция принимающая список чисел и возвращающая максимальное четное число 
 def task7 (lis):
   li= []
   for i in lis:
@@ -44,13 +44,13 @@ def task7 (lis):
 
 
 task7([9,6,7,4,10,88,99,100,400])
-
+#Task8 функция принимающая список чисел и возвращающая список из элементов на четрых позициях
 def task8(a):
   print(a[:4])
   return a[:4]
 
 task8([6,4,5,7,8,9,4,3,2])
-
+#Task9 функция принимающая два списока чисел и возвращающая элементы общие для обоих
 def task9 (li_a,li_b):
   result =[]
   for i  in li_a:
@@ -60,7 +60,7 @@ def task9 (li_a,li_b):
   return result
 
 task9([8,9,6,5,7,5,7,0],[8,9,3,1,1,0,4,5,7])
-
+#Task10 функция принимающая два списока чисел и возвращающая элементы общие для обоих,  но меньше заданой границы
 def task10 (li_a,li_b):
   result =[]
   for i  in li_a:
@@ -71,6 +71,21 @@ def task10 (li_a,li_b):
 
 task10([8,9,6,5,7,5,7,0],[8,9,3,1,1,0,4,5,7])
 
-#Task11
-def task11(li):
-  pass
+#Task11 функция принимающая два списока чисел и возвращающая список - елемент каждого - среднеарифметическое из соотв позиций списка
+def add(x, y):
+        print(list(map(lambda a, b: (a + b)/2, x, y)))
+        return list(map(lambda a, b: (a + b)/2, x, y))
+        
+add([7,9,8],[7,1,3])
+
+#Task12 функция принимающая список чисел и возвращающая список - каждый елемент которого - строка произвольных символов (букв английских) длиной равной соотв елементу списка но не более заданой границы
+def task12(li):
+  o = []
+  for z in li:
+    for x in range(z):
+      v = random.choice(string.ascii_letters)
+      o.append(v)
+      print(o)
+      
+   
+task12([1,2,3])
