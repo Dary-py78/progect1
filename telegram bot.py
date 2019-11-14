@@ -25,14 +25,14 @@ def textMessage(bot, update):
 
 def echo(update, context):
     """Echo the user message."""
-    if update.message.text == "Как дела?":
-        update.message.reply_text("ok, а спроси , сколько мне лет?")
-    elif update.message.text == "Привет":
+    if update.message.text in ("Как дела?", "как дела?", "как дела"):
+        update.message.reply_text("Хорошо, а спроси, сколько мне лет?")
+    elif update.message.text in ("Привет", "привет"):
         update.message.reply_text("Ну давай, спроси меня как дела?")
-    elif update.message.text == "Сколько тебе лет?":
-        update.message.reply_text("я точно моложе, чем ты")
-
-
+    elif update.message.text in ("Сколько тебе лет?", "сколько тебе лет?", "сколько тебе лет"):
+        update.message.reply_text("Я точно моложе, чем ты")
+    else:
+        update.message.reply_text("Я тебя не понимаю")
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -43,7 +43,7 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater("###", use_context=True)
+    updater = Updater("823915961:AAEjY9XIT-0YdwuNDDPv2PSmMha40OZLlxE", use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -61,7 +61,6 @@ def main():
     # Start the Bot
     updater.start_polling()
 
-    # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
     # start_polling() is non-blocking and will stop the bot gracefully.
     updater.idle()
